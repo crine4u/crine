@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import AnimatedContent from '@/components/AnimatedContent';
 import StarBorder from '@/components/StarBorder';
 import Hyperspeed from '@/components/Hyperspeed';
+import RotatingText from '@/components/RotatingText';
 
 export function Hero() {
   return (
@@ -70,7 +71,14 @@ export function Hero() {
 
             <h1 className="font-abril text-7xl md:text-9xl tracking-tight leading-[0.9] text-white">
               ALL ROADS LEAD TO <br />
-              <span className="italic font-playfair pr-4 text-secondary">Mastery</span>
+              <RotatingText 
+                texts={['EXCELLENCE', 'INNOVATION', 'SUCCESS', 'GREATNESS']}
+                mainClassName="italic font-playfair pr-4 text-secondary inline-flex overflow-hidden"
+                staggerFrom="first"
+                staggerDuration={0.03}
+                rotationInterval={3000}
+                transition={{ type: 'spring', damping: 30, stiffness: 200 }}
+              />
             </h1>
             
             <p className="font-outfit text-2xl md:text-3xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
@@ -89,3 +97,4 @@ export function Hero() {
     </section>
   );
 }
+

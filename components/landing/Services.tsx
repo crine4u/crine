@@ -2,7 +2,8 @@
 
 import React from 'react';
 import MagicBento, { BentoCardProps } from '@/components/MagicBento';
-import { Globe, Smartphone, Cpu } from 'lucide-react';
+import { Globe, Smartphone, Cpu, Palette, Sparkles, Cloud } from 'lucide-react';
+import GlareHover from '@/components/GlareHover';
 
 const serviceCards: BentoCardProps[] = [
   {
@@ -22,30 +23,49 @@ const serviceCards: BentoCardProps[] = [
     label: 'Native',
     description: 'Native iOS & Android experiences that feel intuitive and fluid.',
     icon: <Smartphone className="w-20 h-20 text-black" />,
-    color: '#ffffff', // White card
-    // Note: MagicBento text color is usually white, specific styling for this card might be needed or we accept it's dark text on white?
-    // MagicBento uses text-white by default in rendering. 
-    // We should probably stick to dark theme or override styles.
-    // Let's keep it consistent with the theme (Dark) for now to avoid visibility issues, or set a dark color background.
-    // The previous design had white background with black text.
-    // MagicBento is built for dark mode (glows, particles). 
-    // I will use a dark gray for contrast instead of white, to ensure text visibility with the component's structure.
+    color: '#ffffff',
   },
   {
-    colSpan: 3,
+    colSpan: 1,
+    rowSpan: 1,
+    title: 'UI/UX Design',
+    label: 'Creative',
+    description: 'Beautiful interfaces backed by user research and data-driven decisions.',
+    icon: <Palette className="w-12 h-12 mb-4 text-secondary" />,
+    color: '#0f0f12'
+  },
+  {
+    colSpan: 2,
+    rowSpan: 1,
+    title: 'AI Integration',
+    label: 'Intelligence',
+    description: 'Harness the power of machine learning and AI to transform your business operations.',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop',
+    icon: <Sparkles className="w-12 h-12 mb-4 text-secondary" />,
+    color: '#0a0a10'
+  },
+  {
+    colSpan: 2,
     rowSpan: 1,
     title: 'Custom Solutions',
     label: 'Backend',
-    description: 'Tailored data architecture and backend systems.',
+    description: 'Tailored data architecture and backend systems built for scale.',
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop',
     icon: <Cpu className="w-12 h-12 mb-6" />,
-    color: '#18181b' // zinc-900
+    color: '#18181b'
+  },
+  {
+    colSpan: 1,
+    rowSpan: 1,
+    title: 'Cloud Architecture',
+    label: 'Infrastructure',
+    description: 'Scalable and secure cloud infrastructure that grows with your business.',
+    icon: <Cloud className="w-12 h-12 mb-4 text-white" />,
+    color: '#0d0d14'
   }
 ];
 
 import { motion } from 'framer-motion';
-
-// ... serviceCards array remains same, but maybe update colors ...
 
 export function Services() {
   return (
@@ -75,10 +95,11 @@ export function Services() {
             enableBorderGlow={true}
             enableTilt={true}
             spotlightRadius={300}
-            glowColor="rgba(212, 246, 0, 0.4)" // Neon Yellow glow
+            glowColor="rgba(212, 246, 0, 0.4)"
           />
         </motion.div>
       </div>
     </section>
   );
 }
+

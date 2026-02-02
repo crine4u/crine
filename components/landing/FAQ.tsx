@@ -24,6 +24,22 @@ const faqs = [
   {
     question: "What technologies do you use?",
     answer: "We specialize in the React ecosystem (Next.js), typically paired with Tailwind CSS for styling and Framer Motion for interactions. For backend, we use robust solutions tailored to your needs."
+  },
+  {
+    question: "What industries do you specialize in?",
+    answer: "We've delivered exceptional results across FinTech, HealthTech, E-commerce, SaaS, and Creative industries. Our approach adapts to any sector while maintaining design excellence."
+  },
+  {
+    question: "Can you work with existing codebases?",
+    answer: "Yes, we're experienced in taking over and improving existing projects. We'll perform a thorough code audit and create a roadmap for enhancement and modernization."
+  },
+  {
+    question: "What's your pricing model?",
+    answer: "We offer both fixed-price projects and retainer models. After our discovery phase, we provide transparent quotes with detailed breakdowns. No hidden costs, ever."
+  },
+  {
+    question: "How do you handle communication?",
+    answer: "We believe in transparency. You'll have a dedicated project manager, weekly progress calls, and 24/7 access to our project management dashboard with real-time updates."
   }
 ];
 

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import BlurText from '@/components/BlurText';
 import { Card, CardContent } from '@/components/ui/card';
 import { Quote } from 'lucide-react';
+import ProfileCard from '@/components/ProfileCard';
 
 const testimonials = [
   {
@@ -24,6 +25,24 @@ const testimonials = [
     author: "Sarah L.",
     role: "Marketing Director, Horizon",
     date: "Jan 2026"
+  },
+  {
+    quote: "From concept to launch, Hulo exceeded every expectation. Their team moves fast without sacrificing quality.",
+    author: "David K.",
+    role: "Founder, TechStart",
+    date: "Dec 2025"
+  },
+  {
+    quote: "The AI integration they built for us has revolutionized our operations. Truly next-level engineering.",
+    author: "Jennifer M.",
+    role: "VP Engineering, DataCorp",
+    date: "Nov 2025"
+  },
+  {
+    quote: "Working with Hulo felt like having an extension of our own team. Communication was flawless throughout.",
+    author: "Michael R.",
+    role: "Creative Director, Sparkle Agency",
+    date: "Oct 2025"
   }
 ];
 
@@ -37,14 +56,14 @@ export function Testimonials() {
              </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((t, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.2, duration: 0.6 }}
+                  transition={{ delay: i * 0.1, duration: 0.6 }}
                 >
                   <Card className="bg-zinc-900/30 border-white/5 text-white rounded-[30px] backdrop-blur-sm overflow-hidden hover:border-secondary/30 transition-all h-full group">
                     <CardContent className="p-10 flex flex-col justify-between h-full relative">
@@ -70,3 +89,4 @@ export function Testimonials() {
     </section>
   );
 }
+

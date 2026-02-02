@@ -8,26 +8,50 @@ const portfolio = [
   { 
     title: "FinTech Dashboard", 
     category: "Web App", 
-    image: "https://images.unsplash.com/photo-1642132652859-3ef5a92906a3?q=80&w=800&auto=format&fit=crop", // Dark UI
+    image: "https://images.unsplash.com/photo-1642132652859-3ef5a92906a3?q=80&w=800&auto=format&fit=crop",
     description: "Real-time analytics for crypto markets."
   },
   { 
     title: "E-Commerce", 
     category: "Mobile App", 
-    image: "https://images.unsplash.com/photo-1607677686474-922dbc3df5f5?q=80&w=800&auto=format&fit=crop", // Shopping abstract
+    image: "https://images.unsplash.com/photo-1607677686474-922dbc3df5f5?q=80&w=800&auto=format&fit=crop",
     description: "Seamless shopping experience."
   },
   { 
     title: "HealthTech", 
     category: "Platform", 
-    image: "https://images.unsplash.com/photo-1576091160550-217358c7e618?q=80&w=800&auto=format&fit=crop", // Medical UI
+    image: "https://images.unsplash.com/photo-1576091160550-217358c7e618?q=80&w=800&auto=format&fit=crop",
     description: "Connecting patients and doctors."
   },
   { 
     title: "Creative Studio", 
     category: "Website", 
-    image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=800&auto=format&fit=crop", // Minimalist
+    image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=800&auto=format&fit=crop",
     description: "Showcasing world-class art."
+  },
+  { 
+    title: "SaaS Platform", 
+    category: "Web App", 
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+    description: "Enterprise productivity suite."
+  },
+  { 
+    title: "Gaming App", 
+    category: "Mobile App", 
+    image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=800&auto=format&fit=crop",
+    description: "Immersive mobile gaming experience."
+  },
+  { 
+    title: "Social Network", 
+    category: "Platform", 
+    image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop",
+    description: "Next-gen community platform."
+  },
+  { 
+    title: "AI Dashboard", 
+    category: "Web App", 
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop",
+    description: "ML-powered business intelligence."
   },
 ];
 
