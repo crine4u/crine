@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import SplashCursor from '@/components/SplashCursor';
 
 import { Header } from '@/components/landing/Header';
 import { Hero } from '@/components/landing/Hero';
@@ -17,11 +16,9 @@ import { Footer } from '@/components/landing/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-white selection:text-black">
-      {/* <SplashCursor /> */}
+    <div className="min-h-screen bg-[#FFFDF7] text-black selection:bg-[#D4F600] selection:text-black">
       <Header />
       <main>
-        
         <Hero />
         <Services />
         <Process />

@@ -22,16 +22,16 @@ export function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0a0a0c]/80 backdrop-blur-md border-b border-white/5 py-4' : 'bg-transparent py-8'}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#FFFDF7] border-b-3 border-black py-4' : 'bg-[#FFFDF7] py-6'}`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="font-cinzel text-3xl font-bold tracking-tight text-white hover:opacity-80 transition-opacity">
-          HULO<span className="text-secondary">.</span>
+        <Link href="/" className="font-cinzel text-3xl font-black tracking-tight text-black hover:text-[#D4F600] transition-colors">
+          HULO<span className="text-[#D4F600]">.</span>
         </Link>
 
         <div className="hidden md:block">
            <NavigationMenu>
-            <NavigationMenuList className="gap-8">
+            <NavigationMenuList className="gap-2">
               {['Services', 'Work', 'Clients', 'Contact'].map((item, i) => (
                 <NavigationMenuItem key={item}>
                   <motion.div
@@ -40,9 +40,8 @@ export function Header() {
                     transition={{ delay: 0.5 + (i * 0.1), duration: 0.5 }}
                   >
                     <Link href={`#${item.toLowerCase()}`} >
-                      <NavigationMenuLink className="font-outfit text-xs uppercase tracking-widest text-zinc-400 hover:text-white transition-colors cursor-pointer relative group">
+                      <NavigationMenuLink className="font-outfit text-sm font-bold uppercase tracking-wide text-black px-4 py-2 border-3 border-transparent hover:border-black hover:bg-[#D4F600] transition-all cursor-pointer">
                         {item}
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all group-hover:w-full"></span>
                       </NavigationMenuLink>
                     </Link>
                   </motion.div>
@@ -58,7 +57,7 @@ export function Header() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1, duration: 0.5 }}
           >
-            <Button className="font-outfit bg-white text-black hover:bg-zinc-200 rounded-full px-8 py-6 text-sm font-bold border-2 border-transparent transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+            <Button className="font-outfit bg-black text-white hover:bg-[#D4F600] hover:text-black px-8 py-6 text-sm font-bold">
               Let&apos;s Talk
             </Button>
           </motion.div>
@@ -67,18 +66,19 @@ export function Header() {
         <div className="md:hidden">
            <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-white">
+              <Button variant="ghost" size="icon" className="text-black border-3 border-black">
                 <span className="sr-only">Menu</span>
-                <div className="space-y-2 cursor-pointer">
-                  <div className="w-8 h-0.5 bg-white"></div>
-                  <div className="w-8 h-0.5 bg-white"></div>
+                <div className="space-y-1.5 cursor-pointer">
+                  <div className="w-6 h-0.5 bg-black"></div>
+                  <div className="w-6 h-0.5 bg-black"></div>
+                  <div className="w-6 h-0.5 bg-black"></div>
                 </div>
               </Button>
             </SheetTrigger>
-            <SheetContent className="bg-[#0a0a0c] border-zinc-800 text-white">
-              <div className="flex flex-col gap-8 mt-20 font-cinzel text-4xl">
+            <SheetContent className="bg-[#D4F600] border-l-3 border-black text-black">
+              <div className="flex flex-col gap-6 mt-20 font-cinzel text-3xl font-bold">
                 {['Services', 'Work', 'Clients', 'Contact'].map((item) => (
-                  <Link key={item} href={`#${item.toLowerCase()}`} className="hover:text-secondary transition-colors">
+                  <Link key={item} href={`#${item.toLowerCase()}`} className="border-b-3 border-black pb-4 hover:pl-4 transition-all">
                     {item}
                   </Link>
                 ))}

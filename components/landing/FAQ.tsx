@@ -1,12 +1,8 @@
 'use client';
 
 import React from 'react';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+import { motion } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
@@ -23,44 +19,36 @@ const faqs = [
   },
   {
     question: "What technologies do you use?",
-    answer: "We specialize in the React ecosystem (Next.js), typically paired with Tailwind CSS for styling and Framer Motion for interactions. For backend, we use robust solutions tailored to your needs."
+    answer: "We specialize in the React ecosystem (Next.js), typically paired with Tailwind CSS for styling and Framer Motion for interactions."
   },
   {
     question: "What industries do you specialize in?",
-    answer: "We've delivered exceptional results across FinTech, HealthTech, E-commerce, SaaS, and Creative industries. Our approach adapts to any sector while maintaining design excellence."
-  },
-  {
-    question: "Can you work with existing codebases?",
-    answer: "Yes, we're experienced in taking over and improving existing projects. We'll perform a thorough code audit and create a roadmap for enhancement and modernization."
+    answer: "We've delivered exceptional results across FinTech, HealthTech, E-commerce, SaaS, and Creative industries."
   },
   {
     question: "What's your pricing model?",
-    answer: "We offer both fixed-price projects and retainer models. After our discovery phase, we provide transparent quotes with detailed breakdowns. No hidden costs, ever."
-  },
-  {
-    question: "How do you handle communication?",
-    answer: "We believe in transparency. You'll have a dedicated project manager, weekly progress calls, and 24/7 access to our project management dashboard with real-time updates."
+    answer: "We offer both fixed-price projects and retainer models. After our discovery phase, we provide transparent quotes. No hidden costs, ever."
   }
 ];
 
-import { motion } from 'framer-motion';
-
-// ... imports ...
+const colors = ["#D4F600", "#FF6B9D", "#4ECDC4", "#FF8A50", "#A855F7", "#FBBF24"];
 
 export function FAQ() {
+  const [openIndex, setOpenIndex] = React.useState<number | null>(null);
+
   return (
-    <section className="py-32 bg-[#0a0a0c]">
+    <section className="py-32 bg-[#FFFDF7] border-t-3 border-black">
        <div className="container mx-auto px-6 max-w-4xl">
            <motion.h2 
              initial={{ opacity: 0, scale: 0.9 }}
              whileInView={{ opacity: 1, scale: 1 }}
              viewport={{ once: true }}
-             className="font-cinzel text-4xl md:text-5xl text-white mb-16 text-center"
+             className="font-cinzel text-4xl md:text-6xl text-black mb-16 text-center font-black"
            >
-             Frequently Asked
+             Frequently <span className="bg-[#4ECDC4] px-3 border-3 border-black shadow-[4px_4px_0_#000]">Asked</span>
            </motion.h2>
            
-           <Accordion type="single" collapsible className="w-full space-y-4">
+           <div className="space-y-4">
               {faqs.map((faq, index) => (
                 <motion.div
                   key={index}
@@ -68,18 +56,37 @@ export function FAQ() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
+                  className="border-3 border-black shadow-[4px_4px_0_#000] overflow-hidden"
                 >
-                  <AccordionItem value={`item-${index}`} className="border border-white/5 rounded-2xl px-6 data-[state=open]:bg-white/[0.03] data-[state=open]:border-secondary/30 transition-all">
-                    <AccordionTrigger className="font-syne text-xl text-white hover:text-secondary hover:no-underline py-6 transition-colors">
+                  <button
+                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                    className="w-full p-6 text-left font-syne text-lg md:text-xl text-black font-bold flex items-center justify-between transition-colors"
+                    style={{ backgroundColor: openIndex === index ? colors[index % colors.length] : 'white' }}
+                  >
+                    <span className="flex items-center gap-4">
+                      <span className="font-outfit text-sm font-bold px-2 py-1 bg-black text-white">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
                       {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="font-outfit text-zinc-400 text-base leading-relaxed pb-6">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
+                    </span>
+                    <ChevronDown 
+                      className={`w-6 h-6 transition-transform ${openIndex === index ? 'rotate-180' : ''}`}
+                    />
+                  </button>
+                  {openIndex === index && (
+                    <motion.div
+                      initial={{ height: 0 }}
+                      animate={{ height: 'auto' }}
+                      className="border-t-3 border-black bg-white"
+                    >
+                      <p className="p-6 font-outfit text-gray-700 leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </motion.div>
+                  )}
                 </motion.div>
               ))}
-           </Accordion>
+           </div>
        </div>
     </section>
   );

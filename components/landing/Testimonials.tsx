@@ -2,61 +2,58 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import BlurText from '@/components/BlurText';
-import { Card, CardContent } from '@/components/ui/card';
 import { Quote } from 'lucide-react';
-import ProfileCard from '@/components/ProfileCard';
 
 const testimonials = [
   {
-    quote: "Hulo transformed our digital identity. The attention to detail and artistic direction is unmatched in the industry.",
+    quote: "Hulo transformed our digital identity. The attention to detail is unmatched.",
     author: "Elena V.",
     role: "CEO, Artisan & Co.",
-    date: "March 2026"
+    color: "#D4F600"
   },
   {
-    quote: "Technical mastery met visual poetry. Our bounce rates dropped and engagement skyrocketed after the relaunch.",
+    quote: "Technical mastery met visual poetry. Our engagement skyrocketed.",
     author: "Marcus J.",
     role: "CTO, FinFlow",
-    date: "Feb 2026"
+    color: "#FF6B9D"
   },
   {
-    quote: "They didn't just build a website; they crafted a digital experience that perfectly captures our brand's soul.",
+    quote: "They crafted a digital experience that perfectly captures our brand's soul.",
     author: "Sarah L.",
-    role: "Marketing Director, Horizon",
-    date: "Jan 2026"
+    role: "Marketing Director",
+    color: "#4ECDC4"
   },
   {
-    quote: "From concept to launch, Hulo exceeded every expectation. Their team moves fast without sacrificing quality.",
+    quote: "From concept to launch, Hulo exceeded every expectation.",
     author: "David K.",
     role: "Founder, TechStart",
-    date: "Dec 2025"
+    color: "#FF8A50"
   },
   {
-    quote: "The AI integration they built for us has revolutionized our operations. Truly next-level engineering.",
+    quote: "The AI integration they built has revolutionized our operations.",
     author: "Jennifer M.",
-    role: "VP Engineering, DataCorp",
-    date: "Nov 2025"
+    role: "VP Engineering",
+    color: "#A855F7"
   },
   {
-    quote: "Working with Hulo felt like having an extension of our own team. Communication was flawless throughout.",
+    quote: "Working with Hulo felt like having an extension of our own team.",
     author: "Michael R.",
-    role: "Creative Director, Sparkle Agency",
-    date: "Oct 2025"
+    role: "Creative Director",
+    color: "#FBBF24"
   }
 ];
 
 export function Testimonials() {
   return (
-    <section className="py-32 bg-[#08080a] border-y border-white/5 relative">
+    <section className="py-32 bg-black border-y-3 border-white relative">
       <div className="container mx-auto px-6">
         <div className="mb-24 text-center">
-             <h2 className="text-5xl md:text-7xl font-abril text-white mb-8">
-                <BlurText text="Client Stories" delay={150} animateBy="words" direction="top" className="inline-block" />
+             <h2 className="text-5xl md:text-7xl font-cinzel text-white mb-8 font-black">
+               Client <span className="bg-[#D4F600] text-black px-4 border-3 border-white shadow-[4px_4px_0_#fff]">Stories</span>
              </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
                 <motion.div
                   key={i}
@@ -64,24 +61,25 @@ export function Testimonials() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.6 }}
+                  whileHover={{ x: -4, y: -4 }}
+                  className="group border-3 border-white bg-white shadow-[4px_4px_0_#fff] hover:shadow-[8px_8px_0_#fff] transition-all"
                 >
-                  <Card className="bg-zinc-900/30 border-white/5 text-white rounded-[30px] backdrop-blur-sm overflow-hidden hover:border-secondary/30 transition-all h-full group">
-                    <CardContent className="p-10 flex flex-col justify-between h-full relative">
-                        <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
-                            <Quote className="w-20 h-20 text-secondary rotate-180" />
-                        </div>
-                        <div>
-                          <Quote className="w-10 h-10 text-secondary mb-6" />
-                          <p className="font-playfair text-xl md:text-2xl leading-relaxed text-zinc-200 mb-8 italic">
-                              &ldquo;{t.quote}&rdquo;
-                          </p>
-                        </div>
-                        <div>
-                          <h4 className="font-syne text-lg text-white font-bold">{t.author}</h4>
-                          <span className="font-outfit text-xs text-zinc-500 uppercase tracking-widest group-hover:text-secondary transition-colors">{t.role}</span>
-                        </div>
-                    </CardContent>
-                  </Card>
+                  <div 
+                    className="p-4 border-b-3 border-black flex items-center gap-3"
+                    style={{ backgroundColor: t.color }}
+                  >
+                    <Quote className="w-8 h-8 text-black" />
+                    <span className="font-outfit text-xs font-bold uppercase tracking-widest text-black">Testimonial</span>
+                  </div>
+                  <div className="p-6">
+                    <p className="font-outfit text-lg leading-relaxed text-black mb-6">
+                        &ldquo;{t.quote}&rdquo;
+                    </p>
+                    <div className="border-t-2 border-black pt-4">
+                      <h4 className="font-syne text-lg text-black font-bold">{t.author}</h4>
+                      <span className="font-outfit text-sm text-gray-600">{t.role}</span>
+                    </div>
+                  </div>
                 </motion.div>
             ))}
         </div>
@@ -89,4 +87,3 @@ export function Testimonials() {
     </section>
   );
 }
-

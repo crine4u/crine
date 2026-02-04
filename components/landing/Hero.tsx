@@ -3,53 +3,41 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import AnimatedContent from '@/components/AnimatedContent';
-import StarBorder from '@/components/StarBorder';
-import Hyperspeed from '@/components/Hyperspeed';
 import RotatingText from '@/components/RotatingText';
 
 export function Hero() {
   return (
-    
-    <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden bg-[#0a0a0c]">
-       <div className="absolute inset-0 z-0">
-         <Hyperspeed 
-           effectOptions={{
-             distortion: 'xyDistortion',
-             length: 400,
-             roadWidth: 9,
-             islandWidth: 2,
-             lanesPerRoad: 3,
-             fov: 90,
-             fovSpeedUp: 150,
-             speedUp: 3,
-             carLightsFade: 0.4,
-             totalSideLightSticks: 50,
-             lightPairsPerRoadWay: 30,
-             shoulderLinesWidthPercentage: 0.05,
-             brokenLinesWidthPercentage: 0.1,
-             brokenLinesLengthPercentage: 0.5,
-             lightStickWidth: [0.02, 0.05],
-             lightStickHeight: [0.3, 0.7],
-             movingAwaySpeed: [20, 50],
-             movingCloserSpeed: [-150, -230],
-             carLightsLength: [20, 80],
-             carLightsRadius: [0.03, 0.08],
-             carWidthPercentage: [0.1, 0.5],
-             carShiftX: [-0.5, 0.5],
-             carFloorSeparation: [0, 0.1],
-             colors: {
-               roadColor: 0x080808,
-               islandColor: 0x0a0a0a,
-               background: 0x000000,
-               shoulderLines: 0x131318,
-               brokenLines: 0x131318,
-                leftCars: [0xD4F600, 0xa90519, 0xff1010],
-               rightCars: [0xf1f1f1, 0xe6e6e6, 0xdfdfe0],
-               sticks: 0xf1f1f1,
-             }
-           }}
-         />
-       </div>
+    <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden bg-[#FFFDF7]">
+      {/* Neo Brutalism Pattern Background */}
+      <div className="absolute inset-0 z-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(90deg, #000 1px, transparent 1px),
+            linear-gradient(180deg, #000 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px'
+        }}></div>
+      </div>
+      
+      {/* Decorative Shapes */}
+      <motion.div 
+        initial={{ scale: 0, rotate: -45 }}
+        animate={{ scale: 1, rotate: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="absolute top-32 right-20 w-32 h-32 bg-[#D4F600] border-3 border-black shadow-[4px_4px_0_#000] hidden lg:block"
+      ></motion.div>
+      <motion.div 
+        initial={{ scale: 0, rotate: 45 }}
+        animate={{ scale: 1, rotate: 0 }}
+        transition={{ duration: 0.8, delay: 0.7 }}
+        className="absolute bottom-32 left-20 w-24 h-24 bg-[#FF6B9D] border-3 border-black shadow-[4px_4px_0_#000] rounded-full hidden lg:block"
+      ></motion.div>
+      <motion.div 
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.9 }}
+        className="absolute top-1/2 left-10 w-16 h-16 bg-[#4ECDC4] border-3 border-black shadow-[4px_4px_0_#000] hidden lg:block"
+      ></motion.div>
 
       <div className="container mx-auto px-6 relative z-10 text-center">
         <AnimatedContent
@@ -62,18 +50,18 @@ export function Hero() {
           scale={1}
           threshold={0.1}
         >
-          <div className="space-y-12">
-            <div className="inline-block px-6 py-2 border border-white rounded-full bg-black">
-              <span className="font-outfit text-xs uppercase tracking-[0.2em] text-white">
+          <div className="space-y-10">
+            <div className="inline-block px-6 py-3 border-3 border-black bg-[#D4F600] shadow-[4px_4px_0_#000]">
+              <span className="font-outfit text-sm uppercase tracking-[0.15em] text-black font-bold">
                 Est. 2026 // Future Ready
               </span>
             </div>
 
-            <h1 className="font-abril text-7xl md:text-9xl tracking-tight leading-[0.9] text-white">
+            <h1 className="font-cinzel text-6xl md:text-8xl lg:text-9xl tracking-tight leading-[0.95] text-black font-black">
               ALL ROADS LEAD TO <br />
               <RotatingText 
                 texts={['EXCELLENCE', 'INNOVATION', 'SUCCESS', 'GREATNESS']}
-                mainClassName="italic font-playfair pr-4 text-secondary inline-flex overflow-hidden"
+                mainClassName="font-black bg-[#D4F600] px-4 py-2 border-3 border-black shadow-[6px_6px_0_#000] inline-flex overflow-hidden"
                 staggerFrom="first"
                 staggerDuration={0.03}
                 rotationInterval={3000}
@@ -81,15 +69,28 @@ export function Hero() {
               />
             </h1>
             
-            <p className="font-outfit text-2xl md:text-3xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
+            <p className="font-outfit text-xl md:text-2xl text-black max-w-3xl mx-auto leading-relaxed">
               We craft digital experiences with soul. 
-              <span className="text-white block mt-2 font-syne text-lg tracking-wide">Web // Mobile // Brand</span>
+              <span className="block mt-3 font-bold text-lg tracking-wide bg-black text-[#FFFDF7] px-4 py-2 inline-block border-3 border-black shadow-[4px_4px_0_#D4F600]">
+                Web // Mobile // Brand
+              </span>
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-10">
-              <StarBorder as="button" speed="5s" color="white" className="rounded-full bg-black text-white hover:bg-zinc-900 transition-colors">
-                 <span className="font-outfit uppercase px-8 py-4 text-sm tracking-widest">Start A Project</span>
-              </StarBorder>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
+              <motion.button
+                whileHover={{ x: -2, y: -2 }}
+                whileTap={{ x: 4, y: 4 }}
+                className="font-outfit uppercase px-10 py-5 text-base tracking-widest font-bold bg-black text-white border-3 border-black shadow-[6px_6px_0_#D4F600] hover:shadow-[8px_8px_0_#D4F600] active:shadow-none transition-shadow"
+              >
+                Start A Project
+              </motion.button>
+              <motion.button
+                whileHover={{ x: -2, y: -2 }}
+                whileTap={{ x: 4, y: 4 }}
+                className="font-outfit uppercase px-10 py-5 text-base tracking-widest font-bold bg-[#FFFDF7] text-black border-3 border-black shadow-[6px_6px_0_#000] hover:shadow-[8px_8px_0_#000] hover:bg-[#D4F600] active:shadow-none transition-all"
+              >
+                View Work
+              </motion.button>
             </div>
           </div>
         </AnimatedContent>
@@ -97,4 +98,3 @@ export function Hero() {
     </section>
   );
 }
-
