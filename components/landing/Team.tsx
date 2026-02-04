@@ -36,7 +36,7 @@ const teamMembers = [
 
 export function Team() {
   return (
-    <section id="team" className="py-24 md:py-32 bg-[#FFFDF7] border-t-3 border-black relative z-10 w-full overflow-hidden">
+    <section id="team" className="py-24 md:py-32 bg-transparent border-t-3 border-black relative z-10 w-full overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute bottom-20 left-10 w-16 h-16 bg-[#A855F7] border-3 border-black shadow-[4px_4px_0_#000] hidden lg:block"></div>
       
@@ -52,7 +52,7 @@ export function Team() {
               Our <span className="bg-[#FF6B9D] px-3 border-3 border-black shadow-[4px_4px_0_#000]">Team</span>
             </h2>
             <div className="h-2 w-24 bg-black mb-8 mx-auto"></div>
-            <p className="max-w-2xl text-gray-700 text-lg md:text-xl font-outfit">
+            <p className="max-w-2xl text-black text-lg md:text-xl font-outfit">
               Meet the visionaries behind our most ambitious projects.
             </p>
           </motion.div>

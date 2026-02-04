@@ -4,20 +4,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import AnimatedContent from '@/components/AnimatedContent';
 import RotatingText from '@/components/RotatingText';
+import Grainient from '../Grainient';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden bg-[#FFFDF7]">
-      {/* Neo Brutalism Pattern Background */}
-      <div className="absolute inset-0 z-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `
-            linear-gradient(90deg, #000 1px, transparent 1px),
-            linear-gradient(180deg, #000 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px'
-        }}></div>
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden">
+      {/* Grainient Background */}
+      
       
       {/* Decorative Shapes */}
       <motion.div 

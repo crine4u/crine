@@ -37,7 +37,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null);
 
   return (
-    <section className="py-32 bg-[#FFFDF7] border-t-3 border-black">
+    <section className="py-32 bg-transparent border-t-3 border-black">
        <div className="container mx-auto px-6 max-w-4xl">
            <motion.h2 
              initial={{ opacity: 0, scale: 0.9 }}

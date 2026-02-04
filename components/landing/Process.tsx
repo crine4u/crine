@@ -59,7 +59,7 @@ export function Process() {
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
   return (
-    <section id="process" className="py-32 bg-[#FFFDF7] relative overflow-hidden border-t-3 border-black">
+    <section id="process" className="py-32 bg-transparent relative overflow-hidden border-t-3 border-black">
       {/* Decorative Element */}
       <div className="absolute top-10 right-10 w-20 h-20 bg-[#FF6B9D] border-3 border-black shadow-[4px_4px_0_#000] rotate-12 hidden lg:block"></div>
       

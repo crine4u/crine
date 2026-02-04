@@ -16,7 +16,7 @@ import { Footer } from '@/components/landing/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FFFDF7] text-black selection:bg-[#D4F600] selection:text-black">
+    <div className="min-h-screen text-black selection:bg-[#D4F600] selection:text-black">
       <Header />
       <main>
         <Hero />

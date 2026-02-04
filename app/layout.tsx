@@ -10,6 +10,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { Metadata } from "next";
+import GrainientBackground from "@/components/GrainientBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,11 +51,15 @@ export default function RootLayout({
           ${abril.variable}
           ${dmSerif.variable}
           ${syne.variable}
-          antialiased bg-background text-foreground selection:bg-secondary/20 selection:text-secondary
+          antialiased
         `}
       >
-        {children}
+        <GrainientBackground />
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );
 }
+

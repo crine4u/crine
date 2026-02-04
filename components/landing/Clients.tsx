@@ -18,7 +18,7 @@ const colors = ["#D4F600", "#FF6B9D", "#4ECDC4", "#FF8A50", "#A855F7", "#FBBF24"
 
 export function Clients() {
   return (
-    <section id="clients" className="py-24 border-y-3 border-black bg-[#FFFDF7]">
+    <section id="clients" className="py-24 border-y-3 border-black bg-transparent">
        {/* Marquee Text */}
        <div className="overflow-hidden mb-12 border-y-3 border-black py-4 bg-black">
          <motion.div

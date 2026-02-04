@@ -7,42 +7,42 @@ const portfolio = [
   { 
     title: "FinTech Dashboard", 
     category: "Web App", 
-    image: "https://images.unsplash.com/photo-1642132652859-3ef5a92906a3?q=80&w=800&auto=format&fit=crop",
+    image: "/images/webdev.webp",
     description: "Real-time analytics for crypto markets.",
     color: "#D4F600"
   },
   { 
     title: "E-Commerce", 
     category: "Mobile App", 
-    image: "https://images.unsplash.com/photo-1607677686474-922dbc3df5f5?q=80&w=800&auto=format&fit=crop",
+    image: "/images/appdev.avif",
     description: "Seamless shopping experience.",
     color: "#FF6B9D"
   },
   { 
     title: "HealthTech", 
     category: "Platform", 
-    image: "https://images.unsplash.com/photo-1576091160550-217358c7e618?q=80&w=800&auto=format&fit=crop",
+    image: "/images/cloud.avif",
     description: "Connecting patients and doctors.",
-    color: "#4ECDC4"
+    color: "#4ecdc4ff"
   },
   { 
     title: "Creative Studio", 
     category: "Website", 
-    image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=800&auto=format&fit=crop",
+    image: "/images/uiux.png",
     description: "Showcasing world-class art.",
     color: "#FF8A50"
   },
   { 
     title: "SaaS Platform", 
     category: "Web App", 
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+    image: "/images/backend.webp",
     description: "Enterprise productivity suite.",
     color: "#A855F7"
   },
   { 
     title: "Gaming App", 
     category: "Mobile App", 
-    image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=800&auto=format&fit=crop",
+    image: "/images/aiml.jpeg",
     description: "Immersive mobile gaming experience.",
     color: "#FBBF24"
   },
@@ -50,7 +50,7 @@ const portfolio = [
 
 export function Portfolio() {
   return (
-    <section id="work" className="py-32 bg-black overflow-hidden relative border-t-3 border-white">
+    <section id="work" className="py-32 bg-transparent overflow-hidden relative border-t-3 border-black">
       <div className="container mx-auto px-6">
          <motion.div 
             initial={{ opacity: 0, x: -50 }}
@@ -60,13 +60,13 @@ export function Portfolio() {
             className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
          >
             <div>
-              <h2 className="font-syne text-5xl md:text-7xl font-black uppercase text-white">
+              <h2 className="font-syne text-5xl md:text-7xl font-black uppercase text-black">
                 Selected<br/>
-                <span className="bg-[#D4F600] text-black px-4 border-3 border-white shadow-[4px_4px_0_#fff]">Works</span>
+                <span className="bg-[#D4F600] text-black px-4 border-3 border-black shadow-[4px_4px_0_#000]">Works</span>
               </h2>
             </div>
             <div className="hidden md:block">
-               <span className="font-outfit text-sm font-bold border-3 border-white text-white px-6 py-3 bg-transparent">
+               <span className="font-outfit text-sm font-bold border-3 border-black text-black px-6 py-3 bg-transparent">
                  HOVER TO REVEAL
                </span>
             </div>
@@ -81,7 +81,7 @@ export function Portfolio() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 whileHover={{ x: -6, y: -6 }}
-                className="group relative border-3 border-white bg-white shadow-[6px_6px_0_#fff] hover:shadow-[10px_10px_0_#fff] overflow-hidden transition-all cursor-pointer"
+                className="group relative border-3 border-black bg-white shadow-[6px_6px_0_#000] hover:shadow-[10px_10px_0_#000] overflow-hidden transition-all cursor-pointer"
               >
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <img 

@@ -28,7 +28,7 @@ export function Footer() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className="py-16 bg-black text-white border-t-3 border-white relative overflow-hidden"
+      className="py-16 bg-black/70 text-white border-t-3 border-white relative overflow-hidden"
     >
        <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">

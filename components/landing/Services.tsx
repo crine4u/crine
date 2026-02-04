@@ -57,7 +57,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 md:py-32 bg-[#FFFDF7] border-t-3 border-black relative z-10 w-full overflow-hidden">
+    <section id="services" className="py-24 md:py-32 bg-transparent border-t-3 border-black relative z-10 w-full overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between mb-16 lg:mb-24 gap-8 lg:gap-12">
           

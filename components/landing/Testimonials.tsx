@@ -45,11 +45,11 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-32 bg-black border-y-3 border-white relative">
+    <section className="py-32 bg-transparent border-y-3 border-black relative">
       <div className="container mx-auto px-6">
         <div className="mb-24 text-center">
-             <h2 className="text-5xl md:text-7xl font-cinzel text-white mb-8 font-black">
-               Client <span className="bg-[#D4F600] text-black px-4 border-3 border-white shadow-[4px_4px_0_#fff]">Stories</span>
+             <h2 className="text-5xl md:text-7xl font-cinzel text-black mb-8 font-black">
+               Client <span className="bg-[#D4F600] text-black px-4 border-3 border-black shadow-[4px_4px_0_#000]">Stories</span>
              </h2>
         </div>
 
@@ -62,7 +62,7 @@ export function Testimonials() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.6 }}
                   whileHover={{ x: -4, y: -4 }}
-                  className="group border-3 border-white bg-white shadow-[4px_4px_0_#fff] hover:shadow-[8px_8px_0_#fff] transition-all"
+                  className="group border-3 border-black bg-white shadow-[4px_4px_0_#000] hover:shadow-[8px_8px_0_#fff] transition-all"
                 >
                   <div 
                     className="p-4 border-b-3 border-black flex items-center gap-3"

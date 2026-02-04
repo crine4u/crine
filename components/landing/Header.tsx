@@ -22,10 +22,10 @@ export function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#FFFDF7] border-b-3 border-black py-4' : 'bg-[#FFFDF7] py-6'}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/300 backdrop-blur-md border-b-3 border-black py-4' : 'bg-transparent py-6'}`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="font-cinzel text-3xl font-black tracking-tight text-black hover:text-[#D4F600] transition-colors">
+        <Link href="/" className="font-cinzel text-3xl font-black tracking-tight text-white hover:text-[#D4F600] transition-colors">
           HULO<span className="text-[#D4F600]">.</span>
         </Link>
 
@@ -40,7 +40,7 @@ export function Header() {
                     transition={{ delay: 0.5 + (i * 0.1), duration: 0.5 }}
                   >
                     <Link href={`#${item.toLowerCase()}`} >
-                      <NavigationMenuLink className="font-outfit text-sm font-bold uppercase tracking-wide text-black px-4 py-2 border-3 border-transparent hover:border-black hover:bg-[#D4F600] transition-all cursor-pointer">
+                      <NavigationMenuLink className="font-outfit text-sm font-bold uppercase tracking-wide text-white px-4 py-2 border-3 border-transparent hover:border-black hover:bg-[#D4F600] transition-all cursor-pointer">
                         {item}
                       </NavigationMenuLink>
                     </Link>
@@ -66,7 +66,7 @@ export function Header() {
         <div className="md:hidden">
            <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-black border-3 border-black">
+              <Button variant="ghost" size="icon" className="text-white border-3 border-black">
                 <span className="sr-only">Menu</span>
                 <div className="space-y-1.5 cursor-pointer">
                   <div className="w-6 h-0.5 bg-black"></div>
