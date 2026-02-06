@@ -7,11 +7,50 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 
 export function Contact() {
+  const [formData, setFormData] = React.useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [status, setStatus] = React.useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('loading');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus('error');
+    }
+  };
+
   return (
     <section id="contact" className="py-32 relative bg-transparent overflow-hidden border-t-3 border-black">
        {/* Decorative Elements */}
-       <div className="absolute top-20 right-20 w-24 h-24 bg-[#FF6B9D] border-3 border-black shadow-[4px_4px_0_#000] rotate-12 hidden lg:block"></div>
-       <div className="absolute bottom-20 left-20 w-16 h-16 bg-[#4ECDC4] border-3 border-black shadow-[4px_4px_0_#000] hidden lg:block"></div>
+       <div className="absolute top-20 right-20 w-24 h-24 bg-[#FF003C] border-3 border-black shadow-[4px_4px_0_#000] rotate-12 hidden lg:block"></div>
+       <div className="absolute bottom-20 left-20 w-16 h-16 bg-[#00F0FF] border-3 border-black shadow-[4px_4px_0_#000] hidden lg:block"></div>
        
        <div className="container mx-auto px-6 relative z-10">
           <motion.div 
@@ -20,11 +59,11 @@ export function Contact() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto text-center mb-16"
           >
-             <h2 className="font-cinzel text-5xl md:text-7xl mb-6 text-black font-black">
-               Ready to <span className="bg-black text-[#D4F600] px-4 border-3 border-black">Create?</span>
+             <h2 className="font-syne text-5xl md:text-7xl mb-6 text-black font-black">
+               Ready to <span className="bg-black text-[#D4F600] px-4 border-3 border-black">Secure?</span>
              </h2>
              <p className="font-outfit text-lg md:text-xl text-black/80">
-                Let&apos;s discuss your next breakthrough project.
+                Let&apos;s discuss your security infrastructure.
              </p>
           </motion.div>
 
@@ -33,26 +72,65 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-[#4ecdc4ff] border-3 border-black text-black p-8 md:p-12 max-w-4xl mx-auto shadow-[8px_8px_0_#000]"
+            className="bg-[#00F0FF] border-3 border-black text-black p-8 md:p-12 max-w-4xl mx-auto shadow-[8px_8px_0_#000]"
           >
-             <form className="space-y-6">
+             <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="font-outfit text-sm uppercase tracking-widest font-bold text-black">Your Name</label>
-                     <Input placeholder="John Doe" className="bg-[#4ecdc4ff]" />
+                     <Input 
+                        name="name" 
+                        value={formData.name} 
+                        onChange={handleChange} 
+                        placeholder="John Doe" 
+                        className="bg-[#00F0FF] border-black focus:ring-0 placeholder:text-black/50" 
+                        required 
+                     />
                   </div>
                   <div className="space-y-2">
                      <label className="font-outfit text-sm uppercase tracking-widest font-bold text-black">Email Address</label>
-                     <Input type="email" placeholder="john@example.com" className="bg-[#4ecdc4ff]" />
+                     <Input 
+                        name="email" 
+                        type="email" 
+                        value={formData.email} 
+                        onChange={handleChange} 
+                        placeholder="help@crine.in" 
+                        className="bg-[#00F0FF] border-black focus:ring-0 placeholder:text-black/50" 
+                        required 
+                     />
                   </div>
                 </div>
                 <div className="space-y-2">
-                   <label className="font-outfit text-sm uppercase tracking-widest font-bold text-black">The Vision</label>
-                   <Textarea placeholder="Tell us about the project..." className="min-h-[180px] bg-[#4ecdc4ff]" />
+                   <label className="font-outfit text-sm uppercase tracking-widest font-bold text-black">The Mission</label>
+                   <Textarea 
+                      name="message" 
+                      value={formData.message} 
+                      onChange={handleChange} 
+                      placeholder="Tell us about your security needs..." 
+                      className="min-h-[180px] bg-[#00F0FF] border-black focus:ring-0 placeholder:text-black/50" 
+                      required 
+                   />
                 </div>
+                
+                {status === 'success' && (
+                  <div className="p-4 bg-[#D4F600] border-3 border-black text-black font-bold text-center">
+                    Message sent successfully! We will contact you shortly.
+                  </div>
+                )}
+                
+                {status === 'error' && (
+                  <div className="p-4 bg-[#FF003C] border-3 border-black text-white font-bold text-center">
+                    Something went wrong. Please try again later.
+                  </div>
+                )}
+
                 <div className="flex justify-end pt-4">
-                   <Button className="bg-black text-white hover:bg-[#D4F600] hover:text-black px-12 py-6 text-lg font-bold">
-                     Send Proposal
+                   <Button 
+                      type="submit" 
+                      disabled={status === 'loading'}
+                      className="bg-black text-white hover:bg-[#D4F600] hover:text-black px-12 py-6 text-lg font-bold disabled:opacity-50 disabled:cursor-not-allowed"
+                   >
+                     {status === 'loading' ? 'Sending...' : 'Send Encryption'}
                    </Button>
                 </div>
              </form>

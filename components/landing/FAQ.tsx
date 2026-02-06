@@ -43,7 +43,7 @@ export function FAQ() {
              initial={{ opacity: 0, scale: 0.9 }}
              whileInView={{ opacity: 1, scale: 1 }}
              viewport={{ once: true }}
-             className="font-cinzel text-4xl md:text-6xl text-black mb-16 text-center font-black"
+             className="font-syne text-4xl md:text-6xl text-black mb-16 text-center font-black"
            >
              Frequently <span className="bg-[#4ECDC4] px-3 border-3 border-black shadow-[4px_4px_0_#000]">Asked</span>
            </motion.h2>

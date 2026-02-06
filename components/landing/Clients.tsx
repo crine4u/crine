@@ -27,7 +27,7 @@ export function Clients() {
            className="flex whitespace-nowrap gap-8"
          >
            {[...Array(10)].map((_, i) => (
-             <span key={i} className="font-cinzel text-4xl md:text-6xl font-black text-[#D4F600]">
+             <span key={i} className="font-syne text-4xl md:text-6xl font-black text-[#D4F600]">
                TRUSTED BY INNOVATORS •
              </span>
            ))}
@@ -51,7 +51,7 @@ export function Clients() {
                className="aspect-square border-3 border-black shadow-[3px_3px_0_#000] hover:shadow-[5px_5px_0_#000] flex items-center justify-center transition-all cursor-pointer"
                style={{ backgroundColor: colors[index] }}
              >
-               <span className="font-cinzel text-3xl font-black text-black">{logo.letter}</span>
+               <span className="font-syne text-3xl font-black text-black">{logo.letter}</span>
              </motion.div>
            ))}
          </div>

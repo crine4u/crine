@@ -1,5 +1,5 @@
 {
-  "name": "hulo-landing",
+  "name": "crine-landing",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -19,6 +19,7 @@
     "@radix-ui/react-slot": "^1.2.4",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.5.0",
+    "@types/nodemailer": "^7.0.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.6.0",
@@ -28,6 +29,7 @@
     "lucide-react": "^0.563.0",
     "motion": "^12.23.12",
     "next": "16.1.6",
+    "nodemailer": "^8.0.0",
     "ogl": "^1.0.11",
     "postprocessing": "^6.38.2",
     "react": "19.2.3",

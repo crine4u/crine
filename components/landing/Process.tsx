@@ -66,7 +66,7 @@ export function Process() {
       <div className="container mx-auto px-6">
         <div className="mb-20 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
-            <h2 className="text-5xl md:text-7xl font-cinzel text-black mb-6 font-black">
+            <h2 className="text-5xl md:text-7xl font-syne text-black mb-6 font-black">
               The <span className="bg-[#4ECDC4] px-3 border-3 border-black shadow-[4px_4px_0_#000]">Process</span>
             </h2>
             <div className="h-2 w-24 bg-black mx-auto md:mx-0"></div>

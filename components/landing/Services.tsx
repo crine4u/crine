@@ -6,50 +6,50 @@ import { Globe, Smartphone, Cpu, Palette, Cloud, Wrench } from 'lucide-react';
 
 const services = [
   {
-    title: 'Web Development',
-    label: 'Architecture',
-    description: 'Next.js architecture with high-performance optimization.',
-    icon: Globe,
+    title: 'Penetration Testing',
+    label: 'Offense',
+    description: 'Advanced simulation of cyber attacks to identify vulnerabilities.',
+    icon: Wrench,
     color: '#D4F600',
     size: 'large'
   },
   {
-    title: 'Mobile Apps',
-    label: 'Native',
-    description: 'Native iOS & Android experiences.',
-    icon: Smartphone,
+    title: 'Infrastructure Security',
+    label: 'Defense',
+    description: 'Hardening systems against unauthorized access.',
+    icon: Cloud,
     color: '#FF6B9D',
     size: 'small'
   },
   {
-    title: 'UI/UX Design',
-    label: 'Creative',
-    description: 'Pixel-perfect interfaces that inspire.',
-    icon: Palette,
+    title: 'Incident Response',
+    label: 'Reaction',
+    description: 'Immediate action to mitigate data breaches.',
+    icon: Smartphone,
     color: '#4ECDC4',
     size: 'small'
   },
   {
-    title: 'AI Integration',
-    label: 'Intelligence',
-    description: 'Machine learning for smarter products.',
-    icon: Cpu,
+    title: 'Secure Compliance',
+    label: 'Standards',
+    description: 'Adherence to ISO and GDPR standards.',
+    icon: Globe,
     color: '#FF8A50',
     size: 'medium'
   },
   {
-    title: 'Custom Solutions',
-    label: 'Backend',
-    description: 'Robust server-side architecture.',
-    icon: Wrench,
+    title: 'Network Enforcement',
+    label: 'Control',
+    description: 'Monitoring and managing network traffic policies.',
+    icon: Cpu,
     color: '#A855F7',
     size: 'medium'
   },
   {
-    title: 'Cloud Architecture',
-    label: 'Infrastructure',
-    description: 'Scalable cloud-native solutions.',
-    icon: Cloud,
+    title: 'Cloud Security',
+    label: 'Scability',
+    description: 'Securing cloud-native environments.',
+    icon: Palette,
     color: '#FBBF24',
     size: 'small'
   }
@@ -68,7 +68,7 @@ export function Services() {
             transition={{ duration: 0.8 }}
             className="flex-1 max-w-2xl text-center lg:text-left"
           >
-             <h2 className="font-cinzel text-5xl md:text-7xl mb-6 text-black tracking-tight font-black">
+             <h2 className="font-syne text-5xl md:text-7xl mb-6 text-black tracking-tight font-black">
                Our <span className="bg-[#D4F600] px-3 border-3 border-black shadow-[4px_4px_0_#000]">Craft</span>
              </h2>
              <div className="h-2 w-24 bg-black mb-8 mx-auto lg:mx-0"></div>
@@ -129,7 +129,7 @@ export function Services() {
                   </div>
                   
                   <div className="mt-auto">
-                    <h3 className={`font-cinzel font-black text-black mb-2 ${isLarge ? 'text-3xl md:text-4xl' : 'text-xl md:text-2xl'}`}>
+                    <h3 className={`font-syne font-black text-black mb-2 ${isLarge ? 'text-3xl md:text-4xl' : 'text-xl md:text-2xl'}`}>
                       {service.title}
                     </h3>
                     <p className={`font-outfit text-black/80 ${isLarge ? 'text-base' : 'text-sm'}`}>

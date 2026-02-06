@@ -96,7 +96,7 @@ export function Portfolio() {
                     <span className="font-outfit text-xs font-bold uppercase tracking-widest text-black border-2 border-black px-2 py-1 bg-white w-fit mb-3">
                       {item.category}
                     </span>
-                    <h3 className="font-cinzel text-2xl md:text-3xl text-black font-black mb-2">{item.title}</h3>
+                    <h3 className="font-syne text-2xl md:text-3xl text-black font-black mb-2">{item.title}</h3>
                     <p className="font-outfit text-black/80 text-sm">{item.description}</p>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ export function Portfolio() {
                   <span className="font-outfit text-xs font-bold uppercase tracking-widest" style={{ color: item.color === '#FBBF24' ? '#000' : item.color }}>
                     {item.category}
                   </span>
-                  <h3 className="font-cinzel text-xl text-black font-bold">{item.title}</h3>
+                  <h3 className="font-syne text-xl text-black font-bold">{item.title}</h3>
                 </div>
               </motion.div>
             ))}

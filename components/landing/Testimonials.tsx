@@ -6,7 +6,7 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "Hulo transformed our digital identity. The attention to detail is unmatched.",
+    quote: "CRINE transformed our digital identity. The attention to detail is unmatched.",
     author: "Elena V.",
     role: "CEO, Artisan & Co.",
     color: "#D4F600"
@@ -24,7 +24,7 @@ const testimonials = [
     color: "#4ECDC4"
   },
   {
-    quote: "From concept to launch, Hulo exceeded every expectation.",
+    quote: "From concept to launch, CRINE exceeded every expectation.",
     author: "David K.",
     role: "Founder, TechStart",
     color: "#FF8A50"
@@ -36,7 +36,7 @@ const testimonials = [
     color: "#A855F7"
   },
   {
-    quote: "Working with Hulo felt like having an extension of our own team.",
+    quote: "Working with CRINE felt like having an extension of our own team.",
     author: "Michael R.",
     role: "Creative Director",
     color: "#FBBF24"
@@ -48,7 +48,7 @@ export function Testimonials() {
     <section className="py-32 bg-transparent border-y-3 border-black relative">
       <div className="container mx-auto px-6">
         <div className="mb-24 text-center">
-             <h2 className="text-5xl md:text-7xl font-cinzel text-black mb-8 font-black">
+             <h2 className="text-5xl md:text-7xl font-syne text-black mb-8 font-black">
                Client <span className="bg-[#D4F600] text-black px-4 border-3 border-black shadow-[4px_4px_0_#000]">Stories</span>
              </h2>
         </div>

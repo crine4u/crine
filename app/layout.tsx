@@ -30,8 +30,8 @@ const dmSerif = DM_Serif_Display({ variable: "--font-dm-serif", weight: "400", s
 const syne = Syne({ variable: "--font-syne", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Hulo | Digital Future Agency",
-  description: "Web & App Development Agency building the next generation of digital experiences.",
+  title: "CRINE | Critical Response & Infrastructure Network Enforcement",
+  description: "Cybersecurity & IT Firm securing the digital future.",
 };
 
 export default function RootLayout({

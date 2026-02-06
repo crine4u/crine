@@ -25,9 +25,9 @@ export function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/300 backdrop-blur-md border-b-3 border-black py-4' : 'bg-transparent py-6'}`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="font-cinzel text-3xl font-black tracking-tight text-white hover:text-[#D4F600] transition-colors">
-          HULO<span className="text-[#D4F600]">.</span>
-        </Link>
+          <Link href="/" className="font-syne text-3xl font-black tracking-tight text-white hover:text-[#D4F600] transition-colors">
+            CRINE<span className="text-[#D4F600]">.</span>
+          </Link>
 
         <div className="hidden md:block">
            <NavigationMenu>
@@ -76,7 +76,7 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent className="bg-[#D4F600] border-l-3 border-black text-black">
-              <div className="flex flex-col gap-6 mt-20 font-cinzel text-3xl font-bold">
+              <div className="flex flex-col gap-6 mt-20 font-syne text-3xl font-bold">
                 {['Services', 'Work', 'Clients', 'Contact'].map((item) => (
                   <Link key={item} href={`#${item.toLowerCase()}`} className="border-b-3 border-black pb-4 hover:pl-4 transition-all">
                     {item}

@@ -48,7 +48,7 @@ export function Team() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="font-cinzel text-5xl md:text-7xl mb-6 text-black tracking-tight font-black">
+            <h2 className="font-syne text-5xl md:text-7xl mb-6 text-black tracking-tight font-black">
               Our <span className="bg-[#FF6B9D] px-3 border-3 border-black shadow-[4px_4px_0_#000]">Team</span>
             </h2>
             <div className="h-2 w-24 bg-black mb-8 mx-auto"></div>
@@ -75,7 +75,7 @@ export function Team() {
                 style={{ backgroundColor: member.color }}
               >
                 <div className="w-24 h-24 bg-white border-3 border-black rounded-full flex items-center justify-center">
-                  <span className="font-cinzel text-4xl font-black text-black">
+                  <span className="font-syne text-4xl font-black text-black">
                     {member.name.charAt(0)}
                   </span>
                 </div>

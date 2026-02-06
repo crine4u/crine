@@ -46,14 +46,14 @@ export function Hero() {
           <div className="space-y-10">
             <div className="inline-block px-6 py-3 border-3 border-black bg-[#D4F600] shadow-[4px_4px_0_#000]">
               <span className="font-outfit text-sm uppercase tracking-[0.15em] text-black font-bold">
-                Est. 2026 // Future Ready
+                Est. 2026 // Secured Future
               </span>
             </div>
 
-            <h1 className="font-cinzel text-6xl md:text-8xl lg:text-9xl tracking-tight leading-[0.95] text-black font-black">
-              ALL ROADS LEAD TO <br />
+            <h1 className="font-syne text-6xl md:text-8xl lg:text-9xl tracking-tight leading-[0.95] text-black font-black">
+              CRITICAL <br />
               <RotatingText 
-                texts={['EXCELLENCE', 'INNOVATION', 'SUCCESS', 'GREATNESS']}
+                texts={['RESPONSE', 'DEFENSE', 'SECURITY', 'CONTROL']}
                 mainClassName="font-black bg-[#D4F600] px-4 py-2 border-3 border-black shadow-[6px_6px_0_#000] inline-flex overflow-hidden"
                 staggerFrom="first"
                 staggerDuration={0.03}
@@ -63,9 +63,9 @@ export function Hero() {
             </h1>
             
             <p className="font-outfit text-xl md:text-2xl text-black max-w-3xl mx-auto leading-relaxed">
-              We craft digital experiences with soul. 
+              Infrastructure Network Enforcement.
               <span className="block mt-3 font-bold text-lg tracking-wide bg-black text-[#FFFDF7] px-4 py-2 inline-block border-3 border-black shadow-[4px_4px_0_#D4F600]">
-                Web // Mobile // Brand
+                Cybersecurity // IT // Network
               </span>
             </p>
 

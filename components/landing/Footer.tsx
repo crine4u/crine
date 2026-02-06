@@ -34,9 +34,9 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
              {/* Brand */}
              <div>
-                <h3 className="font-cinzel text-4xl text-[#D4F600] font-black mb-4">HULO.</h3>
+                <h3 className="font-syne text-4xl text-[#D4F600] font-black mb-4">CRINE.</h3>
                 <p className="font-outfit text-sm text-gray-400 mb-6">
-                  Crafting digital experiences with soul since 2026.
+                  Critical Response & Infrastructure Network Enforcement.
                 </p>
                 <div className="flex gap-3">
                   {footerLinks.socials.map(social => (
@@ -81,7 +81,7 @@ export function Footer() {
                <ul className="space-y-4 font-outfit text-sm">
                  <li>
                    <span className="text-gray-500 block text-xs uppercase tracking-widest mb-1">Email</span>
-                   <a href="mailto:hello@hulo.studio" className="text-[#D4F600] hover:underline font-bold">hello@hulo.studio</a>
+                   <a href="mailto:help@crine.in" className="text-[#D4F600] hover:underline font-bold">help@crine.in</a>
                  </li>
                  <li>
                    <span className="text-gray-500 block text-xs uppercase tracking-widest mb-1">Phone</span>
@@ -97,7 +97,7 @@ export function Footer() {
           
           {/* Bottom Bar */}
           <div className="pt-8 border-t-3 border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
-             <p className="font-outfit text-sm text-gray-500">© 2026 HULO. All Rights Reserved.</p>
+             <p className="font-outfit text-sm text-gray-500">© 2026 CRINE. All Rights Reserved.</p>
              <div className="flex gap-6 font-outfit text-sm">
                <a href="#" className="text-gray-500 hover:text-[#D4F600] transition-colors">Privacy Policy</a>
                <a href="#" className="text-gray-500 hover:text-[#D4F600] transition-colors">Terms of Service</a>
