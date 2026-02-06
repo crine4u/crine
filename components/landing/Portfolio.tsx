@@ -5,47 +5,33 @@ import { motion } from 'framer-motion';
 
 const portfolio = [
   { 
-    title: "FinTech Dashboard", 
-    category: "Web App", 
-    image: "/images/webdev.webp",
-    description: "Real-time analytics for crypto markets.",
+    title: "Threat Intel", 
+    category: "Monitoring", 
+    image: "/images/cyber_threat.png",
+    description: "Real-time global threat tracking and visualization platform.",
     color: "#D4F600"
   },
   { 
-    title: "E-Commerce", 
-    category: "Mobile App", 
-    image: "/images/appdev.avif",
-    description: "Seamless shopping experience.",
+    title: "Cloud Fortress", 
+    category: "Cloud Security", 
+    image: "/images/cyber_cloud.png",
+    description: "Hardened infrastructure for multi-cloud enterprise environments.",
     color: "#FF6B9D"
   },
   { 
-    title: "HealthTech", 
-    category: "Platform", 
-    image: "/images/cloud.avif",
-    description: "Connecting patients and doctors.",
+    title: "Zero-Trust Mesh", 
+    category: "Network", 
+    image: "/images/cyber_network.png",
+    description: "Next-gen micro-segmentation for distributed workforces.",
     color: "#4ecdc4ff"
   },
   { 
-    title: "Creative Studio", 
-    category: "Website", 
-    image: "/images/uiux.png",
-    description: "Showcasing world-class art.",
+    title: "Biometric AI", 
+    category: "Identity", 
+    image: "/images/cyber_bio.png",
+    description: "Multi-modal authentication using advanced neural patterns.",
     color: "#FF8A50"
-  },
-  { 
-    title: "SaaS Platform", 
-    category: "Web App", 
-    image: "/images/backend.webp",
-    description: "Enterprise productivity suite.",
-    color: "#A855F7"
-  },
-  { 
-    title: "Gaming App", 
-    category: "Mobile App", 
-    image: "/images/aiml.jpeg",
-    description: "Immersive mobile gaming experience.",
-    color: "#FBBF24"
-  },
+  }
 ];
 
 export function Portfolio() {
@@ -61,8 +47,8 @@ export function Portfolio() {
          >
             <div>
               <h2 className="font-syne text-5xl md:text-7xl font-black uppercase text-black">
-                Selected<br/>
-                <span className="bg-[#D4F600] text-black px-4 border-3 border-black shadow-[4px_4px_0_#000]">Works</span>
+                Security<br/>
+                <span className="bg-[#D4F600] text-black px-4 border-3 border-black shadow-[4px_4px_0_#000]">Case Studies</span>
               </h2>
             </div>
             <div className="hidden md:block">

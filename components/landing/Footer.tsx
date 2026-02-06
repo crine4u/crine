@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Instagram, Twitter, Linkedin, Github } from 'lucide-react';
 
 const footerLinks = {
   navigation: [
@@ -13,13 +14,18 @@ const footerLinks = {
     { label: 'Contact', href: '#contact' },
   ],
   services: [
-    { label: 'Web Development', href: '#services' },
-    { label: 'Mobile Apps', href: '#services' },
-    { label: 'UI/UX Design', href: '#services' },
-    { label: 'AI Integration', href: '#services' },
-    { label: 'Cloud Solutions', href: '#services' },
+    { label: 'Penetration Testing', href: '#services' },
+    { label: 'Vulnerability Assessment', href: '#services' },
+    { label: 'Security Audits', href: '#services' },
+    { label: 'Infrastructure Hardening', href: '#services' },
+    { label: 'Cloud Security', href: '#services' },
   ],
-  socials: ['Instagram', 'Twitter', 'LinkedIn', 'GitHub'],
+  socials: [
+    { name: 'Instagram', icon: Instagram, href: '#' },
+    { name: 'Twitter', icon: Twitter, href: '#' },
+    { name: 'LinkedIn', icon: Linkedin, href: '#' },
+    { name: 'GitHub', icon: Github, href: '#' },
+  ],
 };
 
 export function Footer() {
@@ -41,11 +47,12 @@ export function Footer() {
                 <div className="flex gap-3">
                   {footerLinks.socials.map(social => (
                      <a 
-                       key={social} 
-                       href="#" 
-                       className="w-10 h-10 border-3 border-white flex items-center justify-center hover:bg-[#D4F600] hover:border-[#D4F600] hover:text-black transition-all font-syne text-xs font-bold"
+                       key={social.name} 
+                       href={social.href} 
+                       className="w-10 h-10 border-3 border-white flex items-center justify-center hover:bg-[#D4F600] hover:border-[#D4F600] hover:text-black transition-all"
+                       aria-label={social.name}
                      >
-                       {social[0]}
+                       <social.icon className="w-5 h-5" />
                      </a>
                   ))}
                 </div>
@@ -85,11 +92,11 @@ export function Footer() {
                  </li>
                  <li>
                    <span className="text-gray-500 block text-xs uppercase tracking-widest mb-1">Phone</span>
-                   <a href="tel:+1234567890" className="text-white hover:text-[#D4F600] transition-colors">+1 (234) 567-890</a>
+                   <a href="tel:+919593035680" className="text-white hover:text-[#D4F600] transition-colors">+91 9593035680</a>
                  </li>
                  <li>
                    <span className="text-gray-500 block text-xs uppercase tracking-widest mb-1">Location</span>
-                   <span className="text-white">San Francisco, CA</span>
+                   <span className="text-white">Kolkata, West Bengal</span>
                  </li>
                </ul>
              </div>

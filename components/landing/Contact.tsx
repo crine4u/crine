@@ -4,17 +4,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 
 export function Contact() {
   const [formData, setFormData] = React.useState({
     name: '',
-    email: '',
-    message: ''
+    email: ''
   });
   const [status, setStatus] = React.useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
@@ -36,7 +34,7 @@ export function Contact() {
 
       if (response.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', email: '' });
       } else {
         setStatus('error');
       }
@@ -60,10 +58,10 @@ export function Contact() {
             className="max-w-4xl mx-auto text-center mb-16"
           >
              <h2 className="font-syne text-5xl md:text-7xl mb-6 text-black font-black">
-               Ready to <span className="bg-black text-[#D4F600] px-4 border-3 border-black">Secure?</span>
+               Join the <span className="bg-black text-[#D4F600] px-4 border-3 border-black">Waitlist</span>
              </h2>
              <p className="font-outfit text-lg md:text-xl text-black/80">
-                Let&apos;s discuss your security infrastructure.
+                Secure your spot in the next generation of digital defense.
              </p>
           </motion.div>
 
@@ -72,10 +70,10 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-[#00F0FF] border-3 border-black text-black p-8 md:p-12 max-w-4xl mx-auto shadow-[8px_8px_0_#000]"
+            className="bg-[#00F0FF] border-3 border-black text-black p-8 md:p-12 max-w-2xl mx-auto shadow-[8px_8px_0_#000]"
           >
              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
                   <div className="space-y-2">
                     <label className="font-outfit text-sm uppercase tracking-widest font-bold text-black">Your Name</label>
                      <Input 
@@ -100,21 +98,10 @@ export function Contact() {
                      />
                   </div>
                 </div>
-                <div className="space-y-2">
-                   <label className="font-outfit text-sm uppercase tracking-widest font-bold text-black">The Mission</label>
-                   <Textarea 
-                      name="message" 
-                      value={formData.message} 
-                      onChange={handleChange} 
-                      placeholder="Tell us about your security needs..." 
-                      className="min-h-[180px] bg-[#00F0FF] border-black focus:ring-0 placeholder:text-black/50" 
-                      required 
-                   />
-                </div>
                 
                 {status === 'success' && (
                   <div className="p-4 bg-[#D4F600] border-3 border-black text-black font-bold text-center">
-                    Message sent successfully! We will contact you shortly.
+                    Success! Check your email for confirmation.
                   </div>
                 )}
                 
@@ -128,9 +115,9 @@ export function Contact() {
                    <Button 
                       type="submit" 
                       disabled={status === 'loading'}
-                      className="bg-black text-white hover:bg-[#D4F600] hover:text-black px-12 py-6 text-lg font-bold disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full bg-black text-white hover:bg-[#D4F600] hover:text-black px-12 py-6 text-lg font-bold disabled:opacity-50 disabled:cursor-not-allowed"
                    >
-                     {status === 'loading' ? 'Sending...' : 'Send Encryption'}
+                     {status === 'loading' ? 'Processing...' : 'Request Access'}
                    </Button>
                 </div>
              </form>

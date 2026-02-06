@@ -46,7 +46,7 @@ export function Hero() {
           <div className="space-y-10">
             <div className="inline-block px-6 py-3 border-3 border-black bg-[#D4F600] shadow-[4px_4px_0_#000]">
               <span className="font-outfit text-sm uppercase tracking-[0.15em] text-black font-bold">
-                Est. 2026 // Secured Future
+                Secured Future
               </span>
             </div>
 

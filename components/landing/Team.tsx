@@ -5,30 +5,30 @@ import { motion } from 'framer-motion';
 
 const teamMembers = [
   {
-    name: "Alex Rivera",
-    title: "Full-stack Developer",
-    handle: "@arivera",
-    status: "Building the future",
+    name: "Rupam Ghosh",
+    title: "Cybersecurity Researcher",
+    handle: "@0x00hulo",
+    status: "Protecting the future",
     color: "#D4F600"
   },
   {
-    name: "Sarah Chen",
-    title: "UI/UX Engineer",
-    handle: "@schen_dev",
-    status: "Designing experiences",
+    name: "Rohit Jha",
+    title: "ML Researcher",
+    handle: "@rohitjha",
+    status: "Innovating the future",
     color: "#FF6B9D"
   },
   {
-    name: "Marcus Johnson",
-    title: "Cloud Architect",
-    handle: "@mjohnson",
-    status: "Scaling systems",
+    name: "Ayush Burman",
+    title: "Full-stack Developer",
+    handle: "@jaadu",
+    status: "Building the future",
     color: "#4ECDC4"
   },
   {
-    name: "Emma Williams",
+    name: "Satyaki Das",
     title: "Product Lead",
-    handle: "@ewilliams",
+    handle: "@satyakidas",
     status: "Shipping products",
     color: "#FF8A50"
   }

@@ -6,28 +6,28 @@ import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
-    question: "What is your typical project timeline?",
-    answer: "Timelines vary by scope, but a standard bespoke corporate site typically takes 4-6 weeks from discovery to launch. Complex web apps may take 8-12 weeks."
+    question: "How quickly can you respond to a security breach?",
+    answer: "Our Incident Response Team (IRT) operates 24/7/365. We typically initiate triage within 15 minutes of a critical event report and can have on-ground or remote specialists deployed immediately."
   },
   {
-    question: "Do you offer post-launch support?",
-    answer: "Absolutely. We offer tailored maintenance packages to ensure your digital asset remains secure, fast, and up-to-date with the latest web standards."
+    question: "Do you provide audit readiness for compliance?",
+    answer: "Yes. We guide firms through SOC2 Type II, ISO 27001, HIPAA, and GDPR certification processes, providing both the technical hardening and the documentation required for successful audits."
   },
   {
-    question: "Do you work with startups?",
-    answer: "We love visionaries. We offer special partnership models for high-potential startups looking to make a massive impact from day one."
+    question: "What is your approach to Zero-Trust architecture?",
+    answer: "We assume every connection is a potential threat. Our implementations focus on granular identity verification, micro-segmentation of networks, and strict least-privilege access controls across your entire ecosystem."
   },
   {
-    question: "What technologies do you use?",
-    answer: "We specialize in the React ecosystem (Next.js), typically paired with Tailwind CSS for styling and Framer Motion for interactions."
+    question: "How comprehensive are your penetration tests?",
+    answer: "Our Red Team simulations go beyond surface scanning. We employ multi-vector exploit techniques (web, network, social engineering) to find deep vulnerabilities, followed by a prioritized remediation roadmap."
   },
   {
-    question: "What industries do you specialize in?",
-    answer: "We've delivered exceptional results across FinTech, HealthTech, E-commerce, SaaS, and Creative industries."
+    question: "Do you handle post-incident forensic analysis?",
+    answer: "Absolutely. Post-breach, we conduct deep-dive digital forensics to identify the entry point, movement, and data exfiltration details, while simultaneously hardening your posture to prevent recurrence."
   },
   {
-    question: "What's your pricing model?",
-    answer: "We offer both fixed-price projects and retainer models. After our discovery phase, we provide transparent quotes. No hidden costs, ever."
+    question: "Are your encryption protocols future-proof?",
+    answer: "We specialize in transition strategies for Post-Quantum Cryptography (PQC). By leveraging lattice-based algorithms, we ensure your encrypted assets remain secure against future quantum computing capabilities."
   }
 ];
 
@@ -43,9 +43,9 @@ export function FAQ() {
              initial={{ opacity: 0, scale: 0.9 }}
              whileInView={{ opacity: 1, scale: 1 }}
              viewport={{ once: true }}
-             className="font-syne text-4xl md:text-6xl text-black mb-16 text-center font-black"
+             className="font-syne text-4xl md:text-6xl text-black mb-16 text-center font-black uppercase"
            >
-             Frequently <span className="bg-[#4ECDC4] px-3 border-3 border-black shadow-[4px_4px_0_#000]">Asked</span>
+             Security <span className="bg-[#D4F600] px-3 border-3 border-black shadow-[4px_4px_0_#000]">FAQ</span>
            </motion.h2>
            
            <div className="space-y-4">
